@@ -2,13 +2,22 @@ import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { useEffect } from 'react';
+import SearchBar from './components/layout/SearchBar';
+import Logs from './components/logs/Logs';
 
 const App = () => {
   useEffect(() => {
     // Initialize Materialize JS
     M.AutoInit();
   });
-  return <div className="App">My App</div>;
+  return (
+    <>
+      <SearchBar />
+      <div className="container">
+        <Logs />
+      </div>
+    </>
+  );
 };
 
 export default App;
